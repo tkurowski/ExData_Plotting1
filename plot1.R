@@ -4,7 +4,7 @@ library(sqldf)
 select <- "select * from file where Date in ('1/2/2007', '2/2/2007')"
 
 # read
-df <- read.csv2.sql('household_power_consumption.txt', sql = select, na.strings = '?')
+df <- read.csv2.sql('household_power_consumption.txt', sql = select)
 
 png(file = "plot1.png")
 

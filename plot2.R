@@ -4,7 +4,7 @@ library(sqldf)
 select <- "select * from file where Date in ('1/2/2007', '2/2/2007')"
 
 # read
-df <- read.csv2.sql('household_power_consumption.txt', sql = select, na.strings = '?')
+df <- read.csv2.sql('household_power_consumption.txt', sql = select)
 # mutate
 df$datetime = strptime(paste(df$Date, df$Time), '%d/%m/%Y %H:%M:%S')
 
