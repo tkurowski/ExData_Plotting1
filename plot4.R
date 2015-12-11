@@ -14,9 +14,8 @@ par(mfcol = c(2, 2))
 
 with(df, {
     # as in plot2
-    plot(datetime, Global_active_power, type = 'n', xlab = '',
+    plot(datetime, Global_active_power, type = 'l', xlab = '',
          ylab = "Global Active Power (kilowatts)")
-    lines(datetime, Global_active_power)
 
     # from plot3
     plot(datetime, Sub_metering_1, type = 'n',
@@ -28,12 +27,10 @@ with(df, {
            legend = grep("Sub_metering_\\d", names(df), value = TRUE))
 
     # plot (1, 2)
-    plot(datetime, Voltage, type = 'n')
-    lines(datetime, Voltage)
+    plot(datetime, Voltage, type = 'l')
 
     # plot (2, 2)
-    plot(datetime, Global_reactive_power, type = 'n')
-    lines(datetime, Global_reactive_power)
+    plot(datetime, Global_reactive_power, type = 'l')
 })
 
 dev.off()

@@ -10,8 +10,7 @@ df$datetime = strptime(paste(df$Date, df$Time), '%d/%m/%Y %H:%M:%S')
 
 png(file = "plot2.png")
 
-plot(df$datetime, df$Global_active_power, type = 'n', xlab = '',
+plot(df$datetime, df$Global_active_power, type = 'l', xlab = '',
      ylab = "Global Active Power (kilowatts)")
-lines(df$datetime, df$Global_active_power)
 
 dev.off()
